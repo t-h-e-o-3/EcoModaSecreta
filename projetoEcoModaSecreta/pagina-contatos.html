@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Contatos | EcoModa Secreta</title>
+    <link rel="icon" href="img/logo-E.png">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+ <style>/*2*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        iframe{
+            float: right;
+            margin: 20px 40px;            
+        }
+
+        .categoria {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            color: #B8B8B8;
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+
+        h1{
+            font-family: 'Playfair Display', serif;          
+            font-style: italic;
+            font-size: 30px;
+            color: #434343;            
+            margin: 0 0 15px 40px;
+            padding-top: 50px;  
+            font-weight: normal;                
+        }
+
+        h2{
+            font-family: 'DM Sans', sans-serif;
+            font-weight: bold;           
+            font-size: 16px;
+            color: #434343;            
+            margin: 0 0 15px 40px;
+            padding-top: 50px; 
+                       
+        }
+
+        h3{
+            font-family:  'Playfair Display';
+            font-size: 30px;
+            
+            font-weight: normal;
+            color: #434343;
+            padding-bottom: 20px;
+        }
+        
+        a{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: black;
+            text-align: center;
+            font-weight: 500;
+            text-decoration: none;
+            margin-right: 40px;
+            font-size: 12px;
+        }
+       
+            .p-subtitulo{
+            font-family: 'DM Sans', sans-serif;
+            color: #434343;
+            font-size: clamp(16px, 1.5vw, 20px);
+            position: relative;
+            z-index: 1;
+            margin: 0 0 40px 40px;            
+        }
+        .p-geral{
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            color: #66635B;
+            margin-bottom: 2px;
+            margin-left: 40px;                             
+        }    
+            
+        body{
+            background-color: white;
+        }       
+
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0 auto;
+            padding: 5px;    
+            background-color: #F7F5F1 ;   
+            gap: 20px;
+                                                                   
+        }
+
+        .barra-navegacao{                
+            display: flex;
+            justify-content: right;                   
+            margin-right: 0px;
+            flex: 1;    
+
+        }
+
+        .barra-navegacao a:hover{        
+            display: inline-block;    
+            transform: scale(1.1);
+            transition: transform 0.8s ease;
+        } 
+        
+        .barra-navegacao a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 1px;
+
+            background-color: #7B9452;
+
+            transition: width 0.3s ease;
+        }
+
+        .barra-navegacao a:hover::after {
+            width: 100%;
+        }
+
+        .logo-ecomodasecreta{            
+            width: 200px;
+            max-width: 100%;
+            height: auto;            
+            margin: 10px 0 15px 40px;                     
+        }   
+
+
+        .p-footer{
+            background-color: #2C2C2C;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;            
+            color:white;
+            text-align: center;
+            font-style: italic;
+            padding: 5px;
+            font-size: 13px;
+        }
+
+        .p-endereco{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            color: white;
+            margin-left: 10px;
+            padding: 40px; 
+        }
+
+        .p-pagamentos{            
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            color: white;
+            margin-left: 10px;
+            padding: 40px; 
+        }
+
+        .p-novidades{
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            color: #66635B;
+            margin-bottom: 25px;
+            margin-left: 40px;                             
+        }   
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            width: 100%;
+            max-width: 1351px;
+            margin: 0 auto;
+            padding: 0 20px 50px;
+        }
+
+        .banner-footer{
+            text-align: center;
+            background-color: white;
+            margin-bottom: 50px;
+            padding: 80px;
+            margin-left: 40px;
+            margin-right: 40px;            
+            background-image: url(img/banner-footer.png);            
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-position-y: 40%;       
+        }
+
+            .site-footer {
+            clear: both;
+            width: 100%;
+            background-color: #F7F5F1;            
+            color: #e5e3d8;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 20px 0 20px;      
+        }
+
+        
+        .footer-colunas {
+            width: 100%;
+            max-width: 1351px;            
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px 40px;
+            gap: 25px;            
+        }
+
+        
+        .footer-col {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        
+        .footer-col h3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            color: #434343;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;            
+        }
+
+        
+        .footer-col {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col {
+            margin-bottom: 10px;            
+        }
+
+        .footer-col a {
+            color: #434343;            
+            font-size: 11px;
+            transition: color 0.2s;
+            font-weight: normal;
+            text-decoration: none;            
+        }       
+
+        .footer-col p {
+            font-weight: normal;
+            font-size: 11px;
+            color: #434343;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+        
+        .footer-destaque {
+            font-weight: bold;
+            color: #434343;
+        }
+
+        
+        .footer-col-endereco, .footer-col-pagamento {
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding-left: 25px;
+        }
+
+        
+        .icones-pagamento {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            color: #434343;
+        }
+
+        .badge-pagamento {           
+            color: #434343;
+            font-size: 10px;
+            font-weight: normal;
+            padding: 6px 0px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .p-footer-copyright {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;            
+            text-align: left;
+            font-size: 12px;
+            color: #434343;
+            background-color: #F7F5F1;
+            padding-left: 40px;
+            padding-bottom: 40px;            
+        }
+
+        
+        .p-ecomoda-footer{
+            font-family: 'Playfair Display', serif;
+            color: #E0E0E0;
+            text-align: center;
+            font-size: 200px;
+            background-color: #F7F5F1;   
+            width: 100%;  
+        }
+
+        .p-geral a{
+            text-decoration: underline;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+
+    <a href="index.html">
+        <img class="logo-ecomodasecreta" src="img/logo-copia.png" alt="Logomarca EcoModa Secreta">
+    </a>   
+
+    <div class="barra-navegacao">
+        <a href="index.html" style="color:#434343"><span style="font-weight: normal">INÍCIO</span></a>
+    <a href="pagina-sobre.html" style="color:#373631"><span style="font-weight: normal;">SOBRE</span></a> 
+        <a href="pagina-vitrine.html" style="color:#373631"><span style="font-weight: normal;">VITRINE</span></a>
+        <a href="pagina-eventos.html" style="color:#373631"><span style="font-weight: normal;">EVENTOS</span></a>
+        <a style="color:#373631"><span style="font-weight: bold;">CONTATOS</span></a>
+        <!--<a href="#" style="color:#434343"><span style="font-weight: normal;">FAQ</span></a> -->
+    </div>
+
+    </header> 
+
+    <p id="categoria-produto" class="categoria">Início / Contatos</p>
+
+    <h1>Contatos</h1>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.8692029424133!2d-46.332402500000015!3d-23.96506489999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce030f92d80e1f%3A0xa4c4ef27ba8cfedf!2sP%C3%A1tio%20Iporanga!5e0!3m2!1spt-BR!2sbr!4v1793624440534!5m2!1spt-BR!2sbr" 
+    width="650" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+    <h2>Telefone</h2>
+    <p class="p-geral"><a href="https://wa.me/5513997038043" target="_blank">WhatsApp</a></p>
+    <p class="p-geral"><a href="https://chat.whatsapp.com/JRtbYoRgXSkKXmOeLaveJQ?s=cl&p=a&ilr=4&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadTUix4W0JyDH-cOX6RhZpTiz3T3XapPOflOnKV3iVGUvyfWzhZ82w0fet8nw_aem_0CPmDI6IZoC7mvm78070rQ" target="_blank">Grupo Closet Vip</a></p>
+   
+    <h2>Endereço</h2>
+    <p class="p-geral">Shopping Pátio Iporanga - Loja 219 - 2º andar</p>
+    <p class="p-geral">Av. Ana Costa, 465 - Gonzaga, Santos/SP</p> 
+
+    <h2>Redes Sociais</h2>
+    <p class="p-geral"><a href="https://www.instagram.com/ecomoda_secreta__moda_circular/" target="_blank">Instagram</a></p>
+    <p class="p-geral"><a href="https://www.facebook.com/loveclothsp" target="_blank">Facebook</a></p>
+   
+    <!--SEÇÃO FOOTER-->
+    <footer class="site-footer">        
+        <div class="footer-colunas">       
+        
+            <div class="footer-col">
+                <h3>A EcoModa</h3>            
+                <a href="pagina-sobre.html">Sobre</a>
+                <br>
+                <a href="pagina-vitrine.html">Vitrine</a>
+                <br>
+                <p>Segunda a Sábado<br>das 10h às 21h<br>Domingos e Feriados<br>das 15h às 20h</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <a href="https://wa.me/5513997038043" target="_blank">WhatsApp</a>                
+            </div>
+
+            
+            <div class="footer-col">
+                    <h3>Social</h3>            
+                    <p><a href="https://www.instagram.com/ecomoda_secreta__moda_circular" target="_blank">Instagram</a></p>             
+                    <a href="https://www.facebook.com/loveclothsp" target="_blank">Facebook</a>         
+            </div>
+
+            
+            <div class="footer-col footer-col-endereco">
+                <h3>Endereço</h3>
+                <p>Shopping Pátio Iporanga</p>
+                <p>Av. Anna Costa, 465 - Lj 219</p>
+                <p>Gonzaga - Santos, SP</p>
+                <p>CEP 11060-003</p>
+            </div>
+
+            
+            <div class="footer-col footer-col-pagamento">
+                <h3>Pagamento</h3>
+                <div class="icones-pagamento">                
+                    <span class="badge-pagamento">PIX</span>
+                    <span class="badge-pagamento">CRÉDITO</span>
+                    <span class="badge-pagamento">DÉBITO</span>                
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <footer class="ecomoda-footer">        
+        <p class="p-ecomoda-footer">ecomodasecreta</p>
+        <p class="p-footer-copyright">© 2026 EcoModa Secreta Todos os direitos reservados.</p>   
+    </footer>   
+
+</footer>
+</body>
+</html>
