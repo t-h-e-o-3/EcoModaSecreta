@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="icon" href="img/logo-E.png"> 
+    <title>Vitrine | EcoModa Secreta</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body{
+    font-family: Montserrat, sans-serif;
+    background-color: #ffffff;
+    }   
+
+   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #F7F5F1;
+    gap: 20px;
+}
+
+header a {
+    font-family: system-ui, sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 12px;
+}
+
+.barra-navegacao {
+    display: flex;
+    justify-content: right;
+    margin-right: 0;
+    flex: 1;
+}
+
+.barra-navegacao a {
+    position: relative;
+}
+
+.barra-navegacao a:hover {
+    display: inline-block;
+    transform: scale(1.1);
+    transition: transform 0.8s ease;
+}
+
+.barra-navegacao a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background-color: #7B9452;
+    transition: width 0.3s ease;
+}
+
+.barra-navegacao a:hover::after {
+    width: 100%;
+}
+
+.logo-ecomodasecreta {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0 15px 40px;
+}
+    .vitrine-nav {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+        font-size: 12px; 
+        color: #B8B8B8;       
+    }
+
+    .vitrine-filtros p{
+        margin: 0 10px;
+    }
+
+    .vitrine-nav a{
+        text-decoration: none;
+        color: #B8B8B8;    
+    }
+
+    .filtros h1{
+       font-family: 'Playfair Display', serif;
+       font-weight: 100;
+       font-style: italic;
+       font-size: 20px;
+       margin-top: 35px;
+       margin-bottom: 30px;
+       color: #434343;
+    }
+
+    .filtros h2{
+        font-family: 'DM Sans', sans-serif;
+        font-size: 16px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: #434343;
+    }
+    .categorias {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        color: #434343;
+        margin-bottom: 30px;
+    }
+    .categorias li,
+    .tamanhos li {
+        margin-bottom: 10px;
+    }
+    .footer-links{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .vitrine {
+    margin: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.vitrine-filtros {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.produtos {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+    .categorias li, .tamanhos li{
+        list-style: none;
+        color: #434343;
+        font-size: 14px;
+    }
+
+    .roupa img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .roupa:hover {            
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+         transform: translateY(-10px);
+    }       
+
+    .informacoes{
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        color: #434343;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4px;   
+        margin: 12px 0;        
+    }
+
+
+    .roupa button{
+        background-color: transparent;
+        border: 1px solid #7B9452;
+        color: #7B9452;
+        font-weight: normal;
+        padding: 12px 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.4s ease;
+    }
+
+    .roupa button:hover{
+        background-color: #7B9452;       
+        color: white;
+    }
+        .site-footer {
+            width: 100%;
+            background-color: #F7F5F1;            
+            color: #e5e3d8;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 20px 0 20px;      
+        }
+
+        
+        .footer-colunas {
+            width: 100%;
+            max-width: 1351px;            
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px 40px;
+            gap: 25px;            
+        }
+
+        
+        .footer-col {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        
+        .footer-col h3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            color: #434343;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;            
+        }
+
+        
+        .footer-col {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col {
+            margin-bottom: 10px;            
+        }
+
+        .footer-col a {
+            color: #434343;            
+            font-size: 11px;
+            transition: color 0.2s;
+            font-weight: normal;
+            text-decoration: none;            
+        }       
+
+        .footer-col p {
+            font-weight: normal;
+            font-size: 11px;
+            color: #434343;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+        
+        .footer-destaque {
+            font-weight: bold;
+            color: #434343;
+        }
+
+        
+        .footer-col-endereco, .footer-col-pagamento {
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding-left: 25px;
+        }
+
+        
+        .icones-pagamento {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            color: #434343;
+        }
+
+        .badge-pagamento {           
+            color: #434343;
+            font-size: 10px;
+            font-weight: normal;
+            padding: 6px 0px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .p-footer-copyright {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;            
+            text-align: left;
+            font-size: 12px;
+            color: #434343;
+            background-color: #F7F5F1;
+            padding-left: 40px;
+            padding-bottom: 40px;            
+        }
+
+        
+        .p-ecomoda-footer{
+            font-family: 'Playfair Display', serif;
+            color: #E0E0E0;
+            text-align: center;
+            font-size: 200px;
+            background-color: #F7F5F1;            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <a href="index.html">
+        <img class="logo-ecomodasecreta" src="img/logo-copia.png" alt="Logomarca EcoModa Secreta">
+    </a>   
+
+    <div class="barra-navegacao">
+        <a href="index.html" style="color:#373631"><span style="font-weight: normal;">INÍCIO</span></a>
+        <a href="pagina-sobre.html" style="color:#373631"><span style="font-weight: normal;">SOBRE</span></a> 
+        <a href="pagina-vitrine.html" style="color:#434343"><span style="font-weight: bold;">VITRINE</span></a>
+        <a href="pagina-eventos.html" style="color:#373631"><span style="font-weight: normal;">EVENTOS</span></a>
+        <a href="pagina-contatos.html" style="color:#373631"><span style="font-weight: normal;">CONTATOS</span></a>
+      <!--  <a href="#" style="color:#434343"><span style="font-weight: normal;">FAQ</span></a>  -->
+    </div>
+
+    </header>   
+    <div class="vitrine">
+        <div class="vitrine-filtros">
+            <div class="vitrine-nav">
+            <a>Início</a> <p>/</p> <a>Vitrine</a>
+            </div>
+            <div class="filtros">
+            <h1>Filtros</h1>
+            <h2>Categoria</h2>
+            <ul class="categorias">
+                <li>Acessórios</li>
+                <li>Blazer</li>
+                <li>Bolsas</li>
+                <li>Bota</li>
+                <li>Calças</li>
+                <li>Camisas</li>
+                <li>Casacos</li>
+                <li>Coletes</li>
+                <li>Jaquetas</li>
+                <li>Macacão</li>
+                <li>Saias</li>
+                <li>Sapatos</li>
+                <li>Shorts</li>
+                <li>Vestidos</li>
+            </ul>
+            <h2>Tamanhos</h2>
+            <ul class="tamanhos">
+                <li><input type="checkbox"> PP</li>
+                <li><input type="checkbox"> P</li>
+                <li><input type="checkbox"> M</li>
+                <li><input type="checkbox"> G</li>
+                <li><input type="checkbox"> GG</li>
+            </ul>
+            </div>
+        </div>
+        <div class="produtos">
+        <div class="roupa">
+            <img src="img-pecas/camisa-amarras.png" alt="Camisa Amarras">
+            <div class="informacoes">
+                <p>Camisa Amarras</p> <p>R$60,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/tamanco-mule.jpg" alt="Tamanco Mule">
+            <div class="informacoes">
+                <p>Tamanco Mule Spot Shoes</p> <p>R$47,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/saia-midi-tricot.png" alt="Saia Midi">
+            <div class="informacoes">
+                <p>Saia Midi Evasê em Tricot</p> <p>R$77,00</p>
+            </div>
+            <a href="/pagina-perfil-peca.html">
+            <button type="button">Comprar</button>
+            </a>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/jeans-azul.png" alt="Calça Jeans">
+            <div class="informacoes">
+                <p>Calça Jeans Azul</p> <p>R$37,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/blusa-longa.jpg" alt="Blusa longa">
+            <div class="informacoes">
+                <p>Blusa Manga Longa</p> <p>R$80,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/camisa-verde.jpg" alt="camisa verde">
+            <div class="informacoes">
+                <p>Blusa Estilo Túnica</p> <p>R$27,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/melissa.jpg" alt="Calçado Melissa">
+            <div class="informacoes">
+                <p>Sapatilha Melissa</p> <p>R$57,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/sandalia.jpg" alt="Sandália fisherman flatform">
+            <div class="informacoes">
+                <p>Sandália Flatform</p> <p>R$77,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div><div class="roupa">
+            <img src="img-pecas/tenis-slip.jpg" alt="tenis slip melissa">
+            <div class="informacoes">
+                <p>Tênis Slip-on Melissa</p> <p>R$47,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/bolsa-marrom.jpg" alt="Bolsa Ana Capri">
+            <div class="informacoes">
+                <p>Bolsa Marrom Ana Capri</p> <p>R$47,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <!--<div class="roupa">
+            <img src="img-pecas/peca-calca-azul.jpg" alt="Calça azul">
+            <div class="informacoes">
+                <p> Calça azul</p> <p>R$45,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/peca-bolsaa.jpg" alt="Bolsa de mão bege">
+            <div class="informacoes">
+                <p> Bolsa de mão bege</p> <p>R$45,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div><div class="roupa">
+            <img src="img-pecas/peca-vestido.png" alt="Vestido azul longo">
+            <div class="informacoes">
+                <p> Vestido longo azul</p> <p>R$45,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/peca-camisetao-preta.png" alt="Camisetão preto">
+            <div class="informacoes">
+                <p> Camisetão preto</p> <p>R$45,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/peca-calca-azul.jpg" alt="Calça azul">
+            <div class="informacoes">
+                <p> Calça azul</p> <p>R$45,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>
+            <div class="roupa">
+            <img src="img-pecas/peca-bolsaa.jpg" alt="Bolsa de mão bege">
+            <div class="informacoes">
+                <p> Bolsa de mão bege</p> <p>R$45,00</p>
+            </div>
+            <button type="button">Comprar</button>
+        </div>-->
+        </div>
+        </div>
+
+    <!--SEÇÃO FOOTER-->
+    <footer class="site-footer">        
+        <div class="footer-colunas">       
+        
+            <div class="footer-col">
+                <h3>A EcoModa</h3>            
+                <a href="pagina-sobre.html">Sobre</a>
+                <br>
+                <a href="pagina-vitrine.html">Vitrine</a>
+                <br>
+                <p>Segunda a Sábado<br>das 10h às 21h<br>Domingos e Feriados<br>das 15h às 20h</p>
+            </div>       
+
+            
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <a href="https://wa.me/5513997038043" target="_blank">WhatsApp</a>                
+            </div>
+
+            
+            <div class="footer-col">
+                    <h3>Social</h3>            
+                    <p><a href="https://www.instagram.com/ecomoda_secreta__moda_circular" target="_blank">Instagram</a></p>             
+                    <a href="https://www.facebook.com/loveclothsp" target="_blank">Facebook</a>         
+            </div>
+
+            
+            <div class="footer-col footer-col-endereco">
+                <h3>Endereço</h3>
+                <p>Shopping Pátio Iporanga</p>
+                <p>Av. Anna Costa, 465 - Lj 219</p>
+                <p>Gonzaga - Santos, SP</p>
+                <p>CEP 11060-003</p>
+            </div>
+
+            
+            <div class="footer-col footer-col-pagamento">
+                <h3>Pagamento</h3>
+                <div class="icones-pagamento">                
+                    <span class="badge-pagamento">PIX</span>
+                    <span class="badge-pagamento">CRÉDITO</span>
+                    <span class="badge-pagamento">DÉBITO</span>                
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <footer class="ecomoda-footer">        
+        <p class="p-ecomoda-footer">ecomodasecreta</p>
+        <p class="p-footer-copyright">© 2026 EcoModa Secreta Todos os direitos reservados.</p>   
+    </footer>   
+
+</body>
+</html> 
